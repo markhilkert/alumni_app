@@ -1,0 +1,13 @@
+json.id profile.id
+json.user_id profile.user_id
+json.skill_id profile.skill_id
+json.job_id profile.job_id
+json.project_id profile.project_id
+json.location_id profile.location_id
+json.education_id profile.education_id
+json.title profile.title
+json.bio profile.bio
+json.linkedin_url profile.linkedin_url
+json.github_url profile.github_url
+json.personal_website_url profile.personal_website_url
+json.picture_url profile.picture_url

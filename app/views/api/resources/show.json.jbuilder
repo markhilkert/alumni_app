@@ -1,0 +1,1 @@
+json.partial! @resource, partial: "resource", as: :resource
