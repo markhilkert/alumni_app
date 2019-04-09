@@ -1,5 +1,5 @@
 class Job < ApplicationRecord
-  has_many :users, through: :profiles
+  belongs_to :profile
   has_one :location
   has_one :company
 end

@@ -4,6 +4,6 @@ class Profile < ApplicationRecord
   has_many :projects
   has_many :educations
   has_many :jobs
-  has_many :locations
-  has_many :companies
+  has_one :location
+  has_many :companies, through: :jobs
 end

@@ -1,3 +1,4 @@
 class Education < ApplicationRecord
-  belongs_to :user, through: :profiles
+  belongs_to :profile
+  belongs_to :user, through: :profile
 end
