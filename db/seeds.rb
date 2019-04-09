@@ -69,3 +69,36 @@ Profile.create!([
                     last_name: "Solis"
                   }
                 ])
+
+Company.create!([
+                {
+                name: "Google",
+                url: "https://www.google.com"
+                user_id: 1
+                },
+                {
+                name: "Apple",
+                url: "https://www.apple.com"
+                user_id: 2
+                },
+                {
+                name: "Amazon",
+                url: "https://www.amazon.com"
+                user_id: 3
+                },
+                {
+                name: "Facebook",
+                url: "https://www.facebook.com"
+                user_id: 4
+                },
+                {
+                name: "Microsoft",
+                url: "https://www.microsoft.com"
+                user_id: 5
+                },
+                {
+                name: "Budlong's Fried Chicken",
+                url: "https://www.google.com"
+                user_id: 4
+                }
+                ])
