@@ -1,0 +1,13 @@
+json.location_id user.location_id
+json.status user.status
+json.admin user.admin
+json.email user.email
+json.password user.password
+json.first_name user.first_name
+json.last_name user.last_name
+json.title user.title
+json.bio user.bio
+json.linkedin_url user.linkedin_url
+json.github_url user.github_url
+json.personal_website_url user.personal_website_url
+json.picture_url user.picture_url

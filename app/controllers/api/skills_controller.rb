@@ -6,9 +6,7 @@ class Api::SkillsController < ApplicationController
 
   def create
     @skill = Skill.new(
-                              name: params[:name],
-                              competence: params[:competence],
-                              years_of_experience: params[:years_of_experience]
+                              name: params[:name]
                               )
     
     if @skill.save
@@ -27,8 +25,6 @@ class Api::SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
 
     @skill.name = params[:name] || @skill.name
-    @skill.competence = params[:competence] || @skill.competence
-    @skill.years_of_experience = params[:years_of_experience] || @skill.years_of_experience
 
     if @skill.save
       render 'show.json.jbuilder'

@@ -6,12 +6,9 @@ class Api::JobsController < ApplicationController
 
   def create
     @job = Job.new(
-                              profile_id: params[:profile_id],
                               location_id: params[:location_id],
                               title: params[:title],
                               company_id: params[:company_id],
-                              start_date: params[:start_date],
-                              end_date: params[:end_date],
                               description: params[:description]
                               )
     
@@ -30,12 +27,9 @@ class Api::JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
 
-    @job.profile_id = params[:profile_id] || @job.profile_id
     @job.location_id = params[:location_id] || @job.location_id
     @job.title = params[:title] || @job.title
     @job.company_id = params[:company_id] || @job.company_id
-    @job.start_date = params[:start_date] || @job.start_date
-    @job.end_date = params[:end_date] || @job.end_date
     @job.description = params[:description] || @job.description
 
     if @job.save
