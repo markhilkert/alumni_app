@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_09_205619) do
+ActiveRecord::Schema.define(version: 2019_04_11_184515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_205619) do
     t.date "graduation_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -40,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_205619) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "profile_id"
+    t.integer "user_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -48,25 +49,6 @@ ActiveRecord::Schema.define(version: 2019_04_09_205619) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "skill_id"
-    t.integer "job_id"
-    t.integer "project_id"
-    t.integer "location_id"
-    t.integer "education_id"
-    t.string "title"
-    t.text "bio"
-    t.string "linkedin_url"
-    t.string "github_url"
-    t.string "personal_website_url"
-    t.string "picture_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "first_name"
-    t.string "last_name"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -94,6 +76,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_205619) do
     t.integer "years_of_experience"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -106,8 +89,22 @@ ActiveRecord::Schema.define(version: 2019_04_09_205619) do
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
     t.integer "status"
+    t.integer "location_id"
+    t.string "title"
+    t.text "bio"
+    t.string "linkedin_url"
+    t.string "github_url"
+    t.string "personal_website_url"
+    t.string "picture_url"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users_projects", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
