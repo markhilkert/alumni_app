@@ -6,11 +6,8 @@ class Api::EducationsController < ApplicationController
 
   def create
     @education = Education.new(
-                              profile_id: params[:profile_id],
-                              school: params[:school],
-                              degree: params[:degree],
-                              field: params[:field],
-                              graduation_date: params[:graduation_date]
+                              location_id: params[:location_id],
+                              school: params[:school]
                               )
     
     if @education.save
@@ -28,11 +25,8 @@ class Api::EducationsController < ApplicationController
   def update
     @education = Education.find(params[:id])
 
-    @education.profile_id = params[:profile_id] || @education.profile_id
+    @education.location_id = params[:location_id] || @education.location_id
     @education.school = params[:school] || @education.school
-    @education.degree = params[:degree] || @education.degree
-    @education.field = params[:field] || @education.field
-    @education.graduation_date = params[:graduation_date] || @education.graduation_date
 
     if @education.save
       render 'show.json.jbuilder'

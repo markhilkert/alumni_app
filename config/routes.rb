@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
   namespace :api do
-    get "/profiles" => 'profiles#index'
-    get "/profiles/:id" => 'profiles#show'
-    get '/profiles/new' => 'profiles#new'
-    post "/profiles" => 'profiles#create'
-    patch "/profiles/:id" => 'profiles#update'
-    delete "/profiles/:id" => 'profiles#destroy'
+    get "/users" => 'users#index'
+    get "/users/:id" => 'users#show'
+    get '/users/new' => 'users#new'
+    post "/users" => 'users#create'
+    patch "/users/:id" => 'users#update'
+    delete "/users/:id" => 'users#destroy'
 
     get "/skills" => 'skills#index'
     get "/skills/:id" => 'skills#show'
@@ -57,6 +57,34 @@ Rails.application.routes.draw do
     post "/companies" => 'companies#create'
     patch "/companies/:id" => 'companies#update'
     delete "/companies/:id" => 'companies#destroy'
+
+    get "/user_skills" => 'user_skills#index'
+    get "/user_skills/:id" => 'user_skills#show'
+    get '/user_skills/new' => 'user_skills#new'
+    post "/user_skills" => 'user_skills#create'
+    patch "/user_skills/:id" => 'user_skills#update'
+    delete "/user_skills/:id" => 'user_skills#destroy'
+
+    get "/user_projects" => 'user_projects#index'
+    get "/user_projects/:id" => 'user_projects#show'
+    get '/user_projects/new' => 'user_projects#new'
+    post "/user_projects" => 'user_projects#create'
+    patch "/user_projects/:id" => 'user_projects#update'
+    delete "/user_projects/:id" => 'user_projects#destroy'
+
+    get "/user_jobs" => 'user_jobs#index'
+    get "/user_jobs/:id" => 'user_jobs#show'
+    get '/user_jobs/new' => 'user_jobs#new'
+    post "/user_jobs" => 'user_jobs#create'
+    patch "/user_jobs/:id" => 'user_jobs#update'
+    delete "/user_jobs/:id" => 'user_jobs#destroy'
+
+    get "/user_educations" => 'user_educations#index'
+    get "/user_educations/:id" => 'user_educations#show'
+    get '/user_educations/new' => 'user_educations#new'
+    post "/user_educations" => 'user_educations#create'
+    patch "/user_educations/:id" => 'user_educations#update'
+    delete "/user_educations/:id" => 'user_educations#destroy'
   end
 
 end
