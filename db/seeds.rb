@@ -21,7 +21,7 @@ User.create!([{
                 admin: true,
                 first_name: "Phuoc",
                 last_name: "Bui",
-                title: "Bro"
+                title: "Bro",
                 location_id: 1
 
               },
@@ -161,22 +161,22 @@ UserProject.create!([
 
 Project.create!([
                 {
-                name: "LynxIn",
+                title: "LynxIn",
                 },
                 {
-                name: "Sleep Coach",
+                title: "Sleep Coach",
                 },
                 {
-                name: "Rep Set Repeat",
+                title: "Rep Set Repeat",
                 },
                 {
-                name: "Tacoholic",
+                title: "Tacoholic",
                 },
                 {
-                name: "Chipi Chipi",
+                title: "Chipi Chipi",
                 },
                 {
-                name: "Quadly",
+                title: "Quadly",
                 }
                 ])
 
@@ -322,7 +322,6 @@ UserEducation.create!([
                 {
                 user_id: 1,
                 education_id: 1,
-                graduation_date: 1,
                 field: "Software Engineering",
                 degree: "Bachelor's",
                 graduation_date: Time.now - 2.years
@@ -330,7 +329,6 @@ UserEducation.create!([
                 {
                 user_id: 1,
                 education_id: 2,
-                graduation_date: 2,
                 field: "Theater",
                 degree: "Master's",
                 graduation_date: Time.now - 3.years
@@ -338,7 +336,6 @@ UserEducation.create!([
                 {
                 user_id: 1,
                 education_id: 3,
-                graduation_date: 3,
                 field: "Chemical Engineering",
                 degree: "PhD",
                 graduation_date: Time.now - 3.years
@@ -346,7 +343,6 @@ UserEducation.create!([
                 {
                 user_id: 2,
                 education_id: 4,
-                graduation_date: 4,
                 field: "Political Science",
                 degree: "Bachelor's",
                 graduation_date: Time.now - 4.years
@@ -354,7 +350,6 @@ UserEducation.create!([
                 {
                 user_id: 2,
                 education_id: 5,
-                graduation_date: 5,
                 field: "Economics",
                 degree: "Bachelor's",
                 graduation_date: Time.now - 3.years
@@ -362,7 +357,6 @@ UserEducation.create!([
                 {
                 user_id: 3,
                 education_id: 6,
-                graduation_date: ,
                 field: "Mathematics",
                 degree: "Bachelor's",
                 graduation_date: Time.now - 1.years
