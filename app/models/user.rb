@@ -5,13 +5,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :profile
-  has_many :educations, through: :profile
-  has_many :jobs, through: :profile
+  has_many :user_skills
+  has_many :skills, through: :user_skills
+  has_many :user_projects
+  has_many :projects, through: :user_projects
+  has_many :user_jobs
+  has_many :jobs, through: :user_jobs
   has_many :companies, through: :jobs
-  has_many :skills, through: :profile
-  has_many :projects, through: :profile
-  has_one :location, through: :profile
+  has_many :user_educations
+  has_many :educations, through: :user_educations
+  belongs_to :location
 
   enum status: {current_student: 0, alumni: 1, staff: 2, professional: 3}
 end

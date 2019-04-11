@@ -1,5 +1,4 @@
 class Skill < ApplicationRecord
-  enum competence: {beginner: 0, intermediate: 1, advanced: 2}
-  belongs_to :profile
-  belongs_to :user, through: :profile
+  has_many :user_skills
+  has_many :users, through: :user_skills
 end
