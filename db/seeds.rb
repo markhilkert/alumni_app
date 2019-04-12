@@ -74,22 +74,22 @@ User.create!([{
 
 Skill.create!([
                 {
-                name: "Vue.js",
+                name: "Vue.js"
                 },
                 {
-                name: "React.js",
+                name: "React.js"
                 },
                 {
-                name: "Node.js",
+                name: "Node.js"
                 },
                 {
-                name: "Ruby",
+                name: "Ruby"
                 },
                 {
-                name: "Ruby on Rails",
+                name: "Ruby on Rails"
                 },
                 {
-                name: "Git",
+                name: "Git"
                 }
                 ])
 
@@ -132,6 +132,27 @@ UserSkill.create!([
                 }
                 ])
 
+Project.create!([
+                {
+                title: "LynxIn",
+                },
+                {
+                title: "Sleep Coach",
+                },
+                {
+                title: "Rep Set Repeat",
+                },
+                {
+                title: "Tacoholic",
+                },
+                {
+                title: "Chipi Chipi",
+                },
+                {
+                title: "Quadly",
+                }
+                ])
+
 UserProject.create!([
                 {
                 user_id: 1,
@@ -159,26 +180,6 @@ UserProject.create!([
                 }
                 ])
 
-Project.create!([
-                {
-                title: "LynxIn",
-                },
-                {
-                title: "Sleep Coach",
-                },
-                {
-                title: "Rep Set Repeat",
-                },
-                {
-                title: "Tacoholic",
-                },
-                {
-                title: "Chipi Chipi",
-                },
-                {
-                title: "Quadly",
-                }
-                ])
 
 Company.create!([
                 {
