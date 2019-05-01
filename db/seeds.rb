@@ -35,12 +35,6 @@ Resource.create!(
                 description: "Code Wars",
                 url: "https://www.codewars.com/",
                 category: 2
-                },
-                {
-                title: "Leet Code",
-                description: "Coding Practice",
-                url: "https://leetcode.com/",
-                category: 2
                 }
-                ]               
+                ]
                 )

@@ -1,4 +1,4 @@
 class UserEducation < ApplicationRecord
-  has_many :educations
+  belongs_to :education
   belongs_to :user
 end

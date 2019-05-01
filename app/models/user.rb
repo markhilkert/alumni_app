@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :companies, through: :jobs
   has_many :user_educations
   has_many :educations, through: :user_educations
-  belongs_to :location
+  belongs_to :location, optional: true
 
   enum status: {current_student: 0, alumni: 1, staff: 2, professional: 3}
 end
