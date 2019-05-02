@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   namespace :api do
+    post "/sessions" => 'sessions#create'
+
     get "/users" => 'users#index'
     get "/users/:id" => 'users#show'
     get '/users/new' => 'users#new'
