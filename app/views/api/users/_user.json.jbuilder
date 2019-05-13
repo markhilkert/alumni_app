@@ -11,3 +11,15 @@ json.linkedin_url user.linkedin_url
 json.github_url user.github_url
 json.personal_website_url user.personal_website_url
 json.picture_url user.picture_url
+
+json.education do
+  json.array! user.educations, partial: 'api/educations/education', as: :education
+end
+
+json.skill do
+  json.array! user.skills, partial: 'api/skills/skill', as: :skill
+end
+
+json.project do
+  json.array! user.projects, partial: 'api/projects/project', as: :project
+end
