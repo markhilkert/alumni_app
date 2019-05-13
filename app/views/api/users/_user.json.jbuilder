@@ -12,14 +12,22 @@ json.github_url user.github_url
 json.personal_website_url user.personal_website_url
 json.picture_url user.picture_url
 
+json.company do
+  json.array! user.companies, partial: 'api/companies/company', as: :company
+end
+
 json.education do
   json.array! user.educations, partial: 'api/educations/education', as: :education
 end
 
-json.skill do
-  json.array! user.skills, partial: 'api/skills/skill', as: :skill
+json.job do
+  json.array! user.jobs, partial: 'api/jobs/job', as: :job
 end
 
 json.project do
   json.array! user.projects, partial: 'api/projects/project', as: :project
+end
+
+json.skill do
+  json.array! user.skills, partial: 'api/skills/skill', as: :skill
 end
