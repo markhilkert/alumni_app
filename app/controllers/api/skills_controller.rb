@@ -6,8 +6,8 @@ class Api::SkillsController < ApplicationController
 
   def create
     @skill = Skill.new(
-                              name: params[:name]
-                              )
+                        name: params[:name]
+                        )
     
     if @skill.save
       render 'show.json.jbuilder'
