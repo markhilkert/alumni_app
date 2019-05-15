@@ -52,6 +52,12 @@ Location.create!([
                   },
                   { city: "Columbus",
                     state: "Ohio"
+                  },
+                  { city: "Irvine",
+                    state: "California"
+                  },
+                  { city: "University of Southern California",
+                    state: "California"
                   }
                 ])
 
@@ -98,9 +104,16 @@ User.create!([{
                 location_id: 1
               },
               {
-                email: "mark@gmail.com", 
+                email: "mark.hilkert@gmail.com", 
+                title: "Software Engineer", 
+                bio: "At a minimum, I write software; but more than that, I work with a team to solve complex problems. Whether I’ve been solving hands-on engineering problems (B.S. chemical engineering), dreaming up abstract ways to model chemical systems using quantum mechanics (M.S. theoretical chemistry), or writing software to model the effect of drug legalization on violent crime rates (J.D.), I’ve always tackled tough problems.", 
                 password: "password",
                 password_confirmation: "password",
+                linkedin_url: "https://www.linkedin.com/in/markhilkert/",
+                github_url: "https://www.github.com/markhilkert/",
+                personal_website_url: "https://www.github.com/markhilkert/",
+                picture_url: "https://d1qb2nb5cznatu.cloudfront.net/users/5874060-large?1554220744",
+
                 status: "alumni",
                 admin: true,
                 first_name: "Mark",
@@ -172,6 +185,42 @@ UserSkill.create!([
                 years_of_experience: 1
                 },
                 {
+                user_id: 5,
+                skill_id: 1,
+                competence: 1,
+                years_of_experience: 1
+                },
+                {
+                user_id: 5,
+                skill_id: 2,
+                competence: 1,
+                years_of_experience: 1
+                },
+                {
+                user_id: 5,
+                skill_id: 3,
+                competence: 1,
+                years_of_experience: 1
+                },
+                {
+                user_id: 5,
+                skill_id: 4,
+                competence: 1,
+                years_of_experience: 1
+                },
+                {
+                user_id: 5,
+                skill_id: 5,
+                competence: 1,
+                years_of_experience: 1
+                },
+                {
+                user_id: 5,
+                skill_id: 6,
+                competence: 1,
+                years_of_experience: 1
+                },
+                {
                 user_id: 2,
                 skill_id: 1,
                 competence: 1,
@@ -220,6 +269,14 @@ UserProject.create!([
                 {
                 user_id: 2,
                 project_id: 4
+                },
+                {
+                user_id: 5,
+                project_id: 1
+                },
+                {
+                user_id: 5,
+                project_id: 2
                 },
                 {
                 user_id: 2,
@@ -298,6 +355,27 @@ Job.create!([
                 company_id: 1,
                 title: "Sanitation Engineer",
                 description: "Engineered some poop."
+                },
+                {
+                user_id: 5,
+                location_id: 1,
+                company_id: 1,
+                title: "Software Engineer",
+                description: "Wrote software"
+                },
+                {
+                user_id: 5,
+                location_id: 1,
+                company_id: 2,
+                title: "Web Developer",
+                description: "Developed some web"
+                },
+                {
+                user_id: 5,
+                location_id: 1,
+                company_id: 3,
+                title: "AI Engineer",
+                description: "Built Skynet"
                 }
                 ])
 
@@ -333,6 +411,23 @@ UserJob.create!([
                 end_date: (Time.now - 2.months)
                 },
                 {
+                user_id: 5,
+                job_id: 7,
+                start_date: (Time.now - 24.months),
+                end_date: (Time.now - 12.months)
+                },
+                {
+                user_id: 5,
+                job_id: 8,
+                start_date: (Time.now - 12.months),
+                end_date: (Time.now - 6.months)
+                },
+                {
+                user_id: 5,
+                job_id: 9,
+                start_date: (Time.now - 6.months)
+                },
+                {
                 user_id: 2,
                 job_id: 5,
                 start_date: (Time.now - 20.months),
@@ -364,6 +459,14 @@ Education.create!([
                 {
                 location_id: 2,
                 school: "Stanford"
+                },
+                {
+                location_id: 5,
+                school: "University of California, Irvine"
+                },
+                {
+                location_id: 6,
+                school: "University of Southern California"
                 }
                 ])
 
@@ -402,6 +505,27 @@ UserEducation.create!([
                 field: "Economics",
                 degree: "Bachelor's",
                 graduation_date: Time.now - 3.years
+                },
+                {
+                user_id: 5,
+                education_id: 5,
+                field: "Chemical Engineering",
+                degree: "Bachelor's",
+                graduation_date: Date.parse("August 2009")
+                },
+                {
+                user_id: 5,
+                education_id: 7,
+                field: "Theoretical Chemistry",
+                degree: "Master's",
+                graduation_date: Date.parse("December 2011")
+                },
+                {
+                user_id: 5,
+                education_id: 8,
+                field: "Law",
+                degree: "Juris Doctor",
+                graduation_date: Date.parse("May 2016")
                 },
                 {
                 user_id: 3,

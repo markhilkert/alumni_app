@@ -1,3 +1,4 @@
+json.id user.id
 json.location_id user.location_id
 json.status user.status
 json.admin user.admin
