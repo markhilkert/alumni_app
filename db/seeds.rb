@@ -70,6 +70,9 @@ User.create!([{
                 first_name: "Phuoc",
                 last_name: "Bui",
                 title: "Bro",
+                personal_website_url: "https://pnb90.github.io/",
+                github_url: "https://github.com/pnb90",
+                linkedin_url: "https://www.linkedin.com/in/phuocbui90/",
                 location_id: 1
 
               },
